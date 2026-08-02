@@ -226,7 +226,8 @@ export default function AuctionGame({ room, gamePlayers, isHost, playerId, onRef
   const canBid = !!(currentPlayer && !currentPlayer.isEliminated && !currentPlayer.isHost &&
     room.currentPosition && !alreadyHasPosition && room.auctionActive);
 
-  const quickBids = [
+    const quickBids = [
+    { label: "+5M", value: (room.currentHighestBid || 0) + 5_000_000 },
     { label: "+10M", value: (room.currentHighestBid || 0) + 10_000_000 },
     { label: "+25M", value: (room.currentHighestBid || 0) + 25_000_000 },
     { label: "+50M", value: (room.currentHighestBid || 0) + 50_000_000 },
