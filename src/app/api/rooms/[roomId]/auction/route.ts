@@ -84,7 +84,7 @@ export async function POST(
       // Check if 3s countdown already expired (someone else should have closed it)
       if (r.lastBidAt) {
         const elapsed = now - r.lastBidAt;
-        if (elapsed > 4000) {
+        if (elapsed > 16000) {
           // Grace period passed, auction should have auto-closed
           return NextResponse.json({ error: "Auction has expired, wait for next spin" }, { status: 400 });
         }
