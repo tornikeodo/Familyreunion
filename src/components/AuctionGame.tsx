@@ -8,7 +8,7 @@ import FormationView from "./FormationView";
 import SpinWheel from "./SpinWheel";
 import { playBidSound, playSpinSound, playHammerSound, playTimerWarning, playResultReveal } from "@/lib/sounds";
 
-const BID_COUNTDOWN_SECONDS = 3; // seconds after last bid before auto-close
+const BID_COUNTDOWN_SECONDS = 15; // seconds after last bid before auto-close
 
 interface Props {
   room: RoomState;
